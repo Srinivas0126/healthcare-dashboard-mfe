@@ -1,0 +1,347 @@
+:root {
+  color-scheme: light;
+}
+
+.page {
+  --surface: #ffffff;
+  --surface-alt: #f6f8f6;
+  --surface-muted: #eef3ef;
+  --border: #dfe7df;
+  --text-strong: #1f2a1f;
+  --text-muted: #748278;
+  --brand: #2f7f64;
+  --brand-deep: #215842;
+  --success-bg: #dff4e6;
+  --success-text: #237553;
+  --warning-bg: #fff1cf;
+  --warning-text: #b56d00;
+  --danger-bg: #ffe1dc;
+  --danger-text: #c64d38;
+  display: grid;
+  gap: 1.25rem;
+  padding: 0.25rem 0 0.75rem;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--text-strong);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0.45rem 0 0;
+  color: #8a8a8a;
+  font-size: 1rem;
+}
+
+.primaryAction {
+  border: 0;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.95rem 1.25rem;
+  white-space: nowrap;
+  box-shadow: 0 14px 28px rgba(47, 127, 100, 0.18);
+}
+
+.summaryGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.summaryCard,
+.vitalCard,
+.listCard {
+  border: 1px solid var(--border);
+  border-radius: 1.35rem;
+  background: linear-gradient(180deg, #ffffff, #fbfcfb);
+  box-shadow: 0 14px 34px rgba(31, 42, 31, 0.05);
+}
+
+.summaryCard {
+  padding: 1.15rem 1.2rem;
+}
+
+.cardEyebrow {
+  margin: 0;
+  color: #94a09a;
+  font-size: 0.98rem;
+}
+
+.cardValue {
+  margin: 0.55rem 0 0.3rem;
+  color: var(--text-strong);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.cardMeta {
+  margin: 0;
+  color: #95a19c;
+  font-size: 0.98rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.8rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.32rem 0.7rem;
+}
+
+.statusSuccess {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.statusWarning {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.statusDanger {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+.vitalsGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.vitalCard {
+  padding: 1rem 1.15rem 0.95rem;
+}
+
+.vitalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.vitalValue {
+  margin: 0;
+  color: var(--text-strong);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.vitalValue span {
+  margin-left: 0.35rem;
+  color: #9ba7a1;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.chartWrap {
+  margin-top: 0.5rem;
+  height: 3.8rem;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+}
+
+.sparkline,
+.sparklineSecondary {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.sparklineTeal {
+  stroke: #2ca883;
+}
+
+.sparklineMint {
+  stroke: #43b39a;
+}
+
+.sparklineAmber {
+  stroke: #d28a00;
+}
+
+.sparklineSecondary {
+  stroke: #b7ece0;
+  stroke-width: 2;
+}
+
+.chartCaption {
+  margin: 0.25rem 0 0;
+  color: #acb5b0;
+  font-size: 0.92rem;
+}
+
+.detailGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.listCard {
+  padding: 1rem 1.15rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionEyebrow {
+  margin: 0;
+  color: #abb3b0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.list {
+  margin-top: 0.85rem;
+}
+
+.listRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.95rem;
+  padding: 0.9rem 0;
+}
+
+.listRow + .listRow {
+  border-top: 1px solid #ebefeb;
+}
+
+.rowIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.iconMint {
+  background: #e4f4ec;
+  color: #207457;
+}
+
+.iconViolet {
+  background: #f0e7ff;
+  color: #7652c8;
+}
+
+.iconAmber {
+  background: #fff3cf;
+  color: #b17400;
+}
+
+.iconRose {
+  background: #ffe7e3;
+  color: #b64a3b;
+}
+
+.rowContent {
+  min-width: 0;
+}
+
+.rowTitle {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.rowMeta {
+  margin: 0.18rem 0 0;
+  color: #92a09a;
+  font-size: 0.95rem;
+}
+
+.rowChip {
+  align-self: center;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: #617067;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vitalsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryAction {
+    width: 100%;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    gap: 1rem;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryCard,
+  .vitalCard,
+  .listCard {
+    border-radius: 1.1rem;
+  }
+
+  .listRow {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .rowChip,
+  .statusBadge {
+    justify-self: start;
+  }
+}
